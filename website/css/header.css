@@ -1,0 +1,35 @@
+.header{
+    height: 2.5em;
+    display: flex;
+    justify-content: center;
+    background-color: var(--pink);
+    background: linear-gradient(90deg, var(--pink), rgb(212, 152, 199));
+    box-shadow: 0px 0px 20px var(--pink);
+    padding: 0 0.4em;
+}
+
+.header__content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0.4em 0;
+    max-width: calc(var(--screen-max) * 1px);
+}
+
+.header__logo{
+    height: 100%;
+    transform: scaleX(-100%);
+}
+
+.header__title{
+    font-size: 24rem;
+    font-family: Roboto Slab;
+    margin-left: 0.1em;
+    color: var(--light);
+}
+
+.header__github{
+    margin-left: auto;
+    height: 100%;
+}
+

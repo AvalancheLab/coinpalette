@@ -1,0 +1,18 @@
+.footer{
+    color: var(--dark);
+    display: grid;
+    place-items: center;
+    grid-gap: 0.3em;
+    font-weight: 200;
+    padding: 3em;
+    margin-top: auto;
+}
+
+.footer__author{
+    color: inherit;
+    font-weight: 500;
+}
+
+.footer__credit{
+    font-weight: 200;
+}

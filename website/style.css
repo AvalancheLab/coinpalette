@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i|Lobster|Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i&display=swap');
+@import './css/responsiveFonts.css';
+@import './css/defaults.css';
+@import './css/header.css';
+@import './css/splash.css';
+@import './css/footer.css';
+@import './css/code.css';
+@import './css/box.css';
+@import './css/bar.css';
+@import './css/button.css';
+@import './css/utils.css';
+@import './css/api.css';
+
+
+:root {
+    --light: rgb(252, 249, 249);
+    --dark: rgb(128, 128, 128);
+    --gray: rgb(219, 219, 219);
+    --pink:rgb(245, 149, 162);
+    --blue: rgb(118, 149, 162);
+    --green: rgb(155, 198, 162);
+}
+
+* {
+    font-family: 'Roboto';
+    font-weight: normal;
+}
+
+h1, h2 {
+    font-family: 'Roboto Slab';
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-size: 16rem;
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 2.5em);
+    margin: 0 auto;
+    min-width: calc(var(--screen-min) * 1px);
+    max-width: calc(var(--screen-max) * 1px);
+}
+
+
+
+
+
+
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CoinPalette</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__content">
+            <img class="header__logo" src="./assets/palette_white.svg" alt="CoinPalette logo.">
+            <h1 class="header__title">CoinPalette</h1>
+            <img class="header__github" src="./assets/github.svg" alt="Github repository link.">
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="splash">
+            <h2 class="splash__text">A simple API for cryptocurrency logo colors.</h2>
+            <img class="splash__image" src="./assets/palette_color.svg" alt="Colored swatch tags.">
+        </section>
+        <section>
+            <div class="box">
+                <div class="bar bar--request">
+                    <img class="bar__logo bar__logo--request" src="./assets/arrowcircle.svg" alt="">
+                    <h4 class="bar__text">Request</h4>
+                </div>
+                <div class="code">
+                    <code class="code__text fetchInput" contenteditable="true">http://localhost:3000/api/list</code>
+                </div>
+                <button class="button button--send" onclick="fetchData()">
+                    <img class="arrow arrow--right" src="./assets/arrow.svg">
+                    TRY DEMO REQUEST
+                    <img class="arrow arrow--left" src="./assets/arrow.svg">
+                </button>
+            </div>
+            <!-- <img style="margin: 0 auto;" class="join" src="assets/arrow2.svg"> -->
+            <div class="box box--response hidden">
+                <div class="bar bar--response">
+                    <img class="bar__logo" src="./assets/arrowcircle.svg" alt="">
+                    <h4 class="bar__text">Response</h4>
+                </div>
+                <div class="code">
+                    <code class="code__text code__text--response"></code>
+                </div>
+            </div>
+        </section>
+
+        <section class="api">
+            <div class="api__header">
+                <img class="api__icon" src="./assets/portal.svg" alt="">
+                <h2 class="api__title bold">API</h2>
+            </div>
+            <h4 class="api__URL">Base URL: <span class="bold">https://www.coinpalette.com/api</span></h4>
+            <li class="api__methods">
+                <ul class="api__method">
+                    <div class="api__type">GET</div>
+                    <h4 class="api__text">/coinlist</h4>
+                    <p>Fetch a list of all coin names.</p>
+                </ul>
+                <ul class="api__method">
+                    <div class="api__type">GET</div>
+                    <h4 class="api__text">/colors?{coins}</h4>
+                    <p>Fetch a list of colors based on coin parameter. Omit parameters to fetch every coin color.</p>
+                </ul>
+            </li>
+        </section>
+        <footer class="footer">
+            <h4 class="footer__author">Made by AidanK</h4>
+            <p class="footer__credit">Built with Node-Vibrant and CoinGecko's API</p>
+        </footer>
+    </main>
+    <script src="./js/urlFetch.js"></script>
+</body>
+
+</html>

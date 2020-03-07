@@ -1,0 +1,35 @@
+.button {
+    height: 3em;
+    background-color: var(--light);
+    /* border: 1px solid var(--dark); */
+    color: var(--dark);
+}
+
+.button:hover {
+    background-color: var(--green);
+    color: var(--light);
+    transition: ease-in-out 0.1s;
+}
+
+.button:active {
+    background-color: var(--pink);
+}
+
+.button--send {
+    width: 100%;
+    border-top: 1px solid var(--light);
+    background-color: var(--light);
+}
+
+.arrow {
+    height: 10px;
+    margin: 0 10px;
+}
+
+.arrow--left {
+    transform: rotate(90deg);
+    filter: invert();
+}
+.arrow--right {
+    transform: rotate(-90deg);
+}

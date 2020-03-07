@@ -1,0 +1,66 @@
+:root{
+    --screen-max: 760;
+    --screen-min: 320;
+    --h1-max: 60;
+    --h1-min: 60;
+    --h2-max: 22;
+    --h2-min: 21;
+    --h3-max: 16;
+    --h3-min: 15;
+    --h4-max: 14;
+    --h4-min: 14;
+    --p-max: 10;
+    --p-min: 10;
+    font-size: 6.25%;
+}
+
+* { 
+    --responsive: calc((var(--min-size) * 1rem) + calc(var(--max-size) - var(--min-size)) * ((100vw - 320px) / (var(--screen-max) - var(--screen-min))));
+}
+
+h1 {
+    --min-size: var(--h1-min);
+    --max-size: var(--h1-max);
+}
+
+h2 {
+    --min-size: var(--h2-min);
+    --max-size: var(--h2-max);
+    font-size: var(--responsive);
+}
+
+h3 {
+    --min-size: var(--h3-min);
+    --max-size: var(--h3-max);
+    font-size: var(--responsive);
+}
+
+h4{
+    --min-size: var(--h4-min);
+    --max-size: var(--h4-max);
+    font-size: var(--responsive);
+}
+
+p {
+    --min-size: var(--p-min);
+    --max-size: var(--p-max);
+    font-size: var(--responsive);
+}
+
+@media (min-width: var(--screen-max)){
+    h1 {font-size: var(--h1-max)}
+    h2 {font-size: var(--h2-max)}
+    h3 {font-size: var(--h3-max)}
+    h4 {font-size: var(--h4-max)}
+    p  {font-size: var(--p-max) ;}
+}
+
+@media (min-width: var(--screen-min)){
+    h1 {font-size: var(--h1-min)}
+    h2 {font-size: var(--h2-min)}
+    h3 {font-size: var(--h3-min)}
+    h4 {font-size: var(--h4-min)}
+    p  {font-size: var(--p-min)}
+}
+
+
