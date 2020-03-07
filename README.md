@@ -4,5 +4,7 @@ A simple API for fetching cryptocurrency logo colours. Ideal for use with static
 
 ## API
 
-`Get` 
+| Method | Path | Parameters |
+| --- | ---   | --- |
+| GET | /list/ | None |  
  
