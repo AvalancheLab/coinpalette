@@ -1,4 +1,3 @@
-<img align="left" height="60" src="https://img.icons8.com/plasticine/100/000000/color-palette.png"></img>
 # CoinPalette
 
 
