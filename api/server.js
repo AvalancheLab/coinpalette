@@ -4,16 +4,15 @@ const app = express();
 const API = require('./routes/api');
 
 // Allow requests to acces static assets folder.
-app.use( express.static(path.join(__dirname, '/static/')) );
+app.use( express.static(path.join(__dirname, '/website/')) );
 
-// API
 app.use(API);
 
 // Handles any requests that don't match the ones above.
 app.get('*', ( _, res ) =>{
-    res.sendFile(path.join(__dirname,'./static/index.html'));
+    res.sendFile(path.join(__dirname,'./website/index.html'));
 });
 
 app.listen(3000);
-// module.exports = app;
+
 
