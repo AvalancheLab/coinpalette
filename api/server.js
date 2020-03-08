@@ -3,15 +3,10 @@ const path = require('path');
 const app = express();
 const API = require('./routes/api');
 
-// Allow requests to acces static assets folder.
-app.use(express.static(path.join(__dirname, '..', '/website/')));
-
 app.use('/api', API);
 
 // Handles any requests that don't match the ones above.
-app.get('*', ( _, res ) =>{
-    res.sendFile(path.join(__dirname, '..', '/website/index.html'));
-});
+app.get('*', ( _, res ) => res.sendStatus(404));
 
 app.listen(3000);
 
