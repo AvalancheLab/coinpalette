@@ -4,7 +4,7 @@ const app = express();
 const API = require('./routes/api');
 
 // Allow requests to acces static assets folder.
-app.use( express.static(path.join(__dirname, '/website/')) );
+app.use(express.static(path.join(__dirname, '/website/')));
 
 app.use(API);
 
