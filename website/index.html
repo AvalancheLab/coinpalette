@@ -4,74 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet"> 
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
     <title>CoinPalette</title>
 </head>
 <body>
-    <header class="header">
-        <div class="header__content">
-            <img class="header__logo" src="./assets/palette_white.svg" alt="CoinPalette logo.">
+    <main>
+        <header class="header">
             <h1 class="header__title">CoinPalette</h1>
-            <img class="header__github" src="./assets/github.svg" alt="Github repository link.">
-        </div>
-    </header>
+            <h2 class="header__subtitle">Cryptocurrency logo color API</h2>
+        </header>
 
-    <main class="main">
-        <section class="splash">
-            <h2 class="splash__text">A simple API for cryptocurrency logo colors.</h2>
-            <img class="splash__image" src="./assets/palette_color.svg" alt="Colored swatch tags.">
+        <section class="box fetch">
+            <p contenteditable=true class="fetch__url">https://api.coingecko.com/api/v3/coins/list</p>
+            <button class="fetch__submit" onclick="fetchData()">Fetch</button>
         </section>
+
+        <section class="box response">
+            <code class="response__code">{
+"bitcoin": {
+            "Vibrant": {
+                    "rgb": [244,148,28],
+                    "population": 1454
+            },
+            "LightVibrant": {
+                "rgb": [252,191,119],
+                "population": 21
+            },
+            "DarkVibrant": {
+                "rgb": [
+                    126.47142857142859,
+                    72.9857142857143,
+                    6.1285714285714095
+                ],
+                "population": 0
+            },
+            "Muted": {
+                "rgb": [
+                    145.92857142857144,
+                    84.21428571428571,
+                    7.071428571428546
+                ],
+                "population": 0
+            },
+            "LightMuted": {
+                "rgb": [
+                    149.69784172661872,
+                    82.55395683453237,
+                    3.3021582733812687
+                ],
+                "population": 0
+            },
+            "DarkMuted": {
+                "rgb": [
+                    145.92857142857144,
+                    84.21428571428571,
+                    7.071428571428546
+                ],
+                "population": 0
+            }
+}</code>
+        </section>
+
         <section>
-            <div class="box">
-                <div class="bar bar--request">
-                    <img class="bar__logo bar__logo--request" src="./assets/arrowcircle.svg" alt="">
-                    <h4 class="bar__text">Request</h4>
-                </div>
-                <div class="code">
-                    <code class="code__text fetchInput" contenteditable="true">https://www.coinpalette.com/api/list</code>
-                </div>
-                <button class="button button--send" onclick="fetchData()">
-                    <img class="arrow arrow--right" src="./assets/arrow.svg">
-                    TRY DEMO REQUEST
-                    <img class="arrow arrow--left" src="./assets/arrow.svg">
-                </button>
-            </div>
-            <!-- <img style="margin: 0 auto;" class="join" src="assets/arrow2.svg"> -->
-            <div class="box box--response hidden">
-                <div class="bar bar--response">
-                    <img class="bar__logo" src="./assets/arrowcircle.svg" alt="">
-                    <h4 class="bar__text">Response</h4>
-                </div>
-                <div class="code">
-                    <code class="code__text code__text--response"></code>
-                </div>
-            </div>
+            <table class="api box">
+                <colgroup>
+                    <col style="background: yellow;"/>
+                    <col/>
+                    <col/>
+                </colgroup>
+                <tr class="api__row">
+                    <th>Request</th>
+                    <th>Path</th>
+                    <th>Description</th>
+                </tr>
+                <tr class="api__row">
+                    <td>Get</td>
+                    <td>List</td>
+                    <td>Get list for all coins.</td>
+                </tr>
+                <tr class="api__row">
+                    <td>Get</td>
+                    <td>/colors?{coinList}</td>
+                    <td>Get colors for selected coins. Omit parameters to fetch for all coins.</td>
+                </tr>
+            </table>
         </section>
 
-        <section class="api">
-            <div class="api__header">
-                <img class="api__icon" src="./assets/portal.svg" alt="">
-                <h2 class="api__title bold">API</h2>
-            </div>
-            <h4 class="api__URL">Base URL: <span class="bold">https://www.coinpalette.com/api</span></h4>
-            <li class="api__methods">
-                <ul class="api__method">
-                    <div class="api__type">GET</div>
-                    <h4 class="api__text">/coinlist</h4>
-                    <p>Fetch a list of all coin names.</p>
-                </ul>
-                <ul class="api__method">
-                    <div class="api__type">GET</div>
-                    <h4 class="api__text">/colors?{coins}</h4>
-                    <p>Fetch a list of colors based on coin parameter. Omit parameters to fetch every coin color.</p>
-                </ul>
-            </li>
-        </section>
         <footer class="footer">
-            <h4 class="footer__author">Made by AidanK</h4>
-            <p class="footer__credit">Built with Node-Vibrant and CoinGecko's API</p>
+            <p class="footer__author">Made by AvalancheLab</p>
+            <p>Built with 
+                <a target="_blank" rel="noopener noreferrer" href="http://www.freepik.com">Node-Vibrant</a> and 
+                <a target="_blank" rel="noopener noreferrer" href="http://www.coingecko.com/api">CoinGecko's API.</a>
+            </p>
+            <p class="footer__bg"><a target="_blank" rel="noopener noreferrer" href="http://www.freepik.com">Background designed by Freepik</a></p>
         </footer>
     </main>
-    <script src="./js/urlFetch.js"></script>
+    <script defer src="./js/urlFetch.js"></script>
 </body>
 
 </html>

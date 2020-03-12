@@ -9,7 +9,19 @@
     font-variant-numeric: normal;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+body{
+    overflow-x: hidden;
+}
+
 input, button, submit { border:none; } 
 
 a { font-size: inherit }
 a:hover{ cursor:pointer }
+
+code{
+    white-space: pre-wrap;
+}

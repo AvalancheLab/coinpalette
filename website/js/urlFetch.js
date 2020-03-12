@@ -1,11 +1,10 @@
-const output = document.querySelector('.code__text--response');
+const output = document.querySelector('.response__code');
 async function fetchData () {
 
-    document.querySelector('.box--response').classList.add('visible');
     output.innerHTML = 'Fetching...';
 
     try {
-        const url = document.querySelector('.fetchInput').innerHTML;
+        const url = document.querySelector('.fetch__url').innerHTML;
         console.log(url)
         const response = await fetch(url);
         console.log(response)
