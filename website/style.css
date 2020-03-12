@@ -14,7 +14,7 @@ body {
     width: 100vw;
     color: var(--white);
     background: rgba(35, 43, 65, 1);
-    background: url('./assets/background4.png');
+    background: url('./assets/background5.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -42,7 +42,7 @@ main{
 }
 
 .header{
-    margin-top: 6em;
+    margin-top: 4em;
     text-transform: uppercase;
 }
 
@@ -63,7 +63,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(35, 43, 65, 0.5);
+    background: rgba(35, 43, 65, 0.7);
 }
 
 .fetch__url{
@@ -83,52 +83,67 @@ main{
 }
 
 button:focus{
-    background-color: rgba(35, 43, 65, 0.5);
+    background-color: rgba(35, 43, 65, 0.7);
 }
 
 button:hover{
-    background-color: rgba(35, 43, 65, 0.5);
+    background-color: rgba(35, 43, 65, 0.7);
 }
 
 .box{
     border: 1px solid var(--white);
+    border-radius: 3px;
+    box-shadow: 2em 2em 5em rgba(14, 17, 26, 0.4);
 }
 
 .response{
-    background: rgba(35, 43, 65, 0.5);
+    background: rgba(35, 43, 65, 0.7);
     padding: 2em;
-    margin-top: 3em;
-    height: 15em;
+    margin-top: 1.5em;
+    height: 100%;
     overflow-y: scroll;
+    /* border-top: 0px; */
 }
-
 
 .response__code{
     font-size: 12rem;
     letter-spacing: 0.1em;
 }
 
-.api{
-    background: rgba(35, 43, 65, 0.3);
-    margin-top: 2em;
+.table{
+    margin-top: 3em;
+}
+.table__row{
+    padding: 5em;
 }
 
-.api th, .api td {
+.table__row--header{
+    font-weight: bold;
+}
+
+.table__item{
+    padding: 0.5em 1.5em;
+    vertical-align: text-top;
     text-align: left;
-    /* padding: 0.25em 0.5em; */
-}
-
-.api th{
     background: rgba(35, 43, 65, 0.7);
-    border-bottom: 1px solid var(--white);
+}
+.table__item--request{
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
+.table__item--path{
+    white-space: nowrap;
+}
 
-
+.table__row--header{
+    margin-bottom: 1px solid var(--white);
+    background: rgba(35, 43, 65, 0.7);
+}
 
 
 .footer{
-    margin-top: auto;
+    margin-top: 3em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -136,14 +151,19 @@ button:hover{
     margin-bottom: 3em;
 }
 
-.footer__bg{
-    font-size: 8rem;
+.footer__item{
+    margin: 0.05em 0;
 }
 
-.footer__author{
+.footer__item--author{
     font-weight: bold;
     font-size: 14rem;
 }
+
+.footer__item--bg{
+    font-size: 9rem;
+}
+
 
 
 
