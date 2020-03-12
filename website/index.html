@@ -67,37 +67,37 @@
         </section>
 
         <section>
-            <table class="api box">
+            <table class="table box">
                 <colgroup>
-                    <col style="background: yellow;"/>
-                    <col/>
-                    <col/>
+                    <col style="font-weight: bold;text-transform: uppercase;">
+                    <col>
+                    <col>
                 </colgroup>
-                <tr class="api__row">
-                    <th>Request</th>
-                    <th>Path</th>
-                    <th>Description</th>
+                <tr class="table__row table__row--header">
+                    <th class="table__item">Request</th>
+                    <th class="table__item">Path</th>
+                    <th class="table__item">Description</th>
                 </tr>
-                <tr class="api__row">
-                    <td>Get</td>
-                    <td>List</td>
-                    <td>Get list for all coins.</td>
+                <tr class="table__row">
+                    <td class="table__item table__item--request">Get</td>
+                    <td class="table__item  table__item--path">/list</td>
+                    <td class="table__item">Get list for all coins.</td>
                 </tr>
-                <tr class="api__row">
-                    <td>Get</td>
-                    <td>/colors?{coinList}</td>
-                    <td>Get colors for selected coins. Omit parameters to fetch for all coins.</td>
+                <tr class="table__row">
+                    <td class="table__item table__item--request">Get</td>
+                    <td class="table__item table__item--path">/colors?{coinList}</td>
+                    <td class="table__item">Get colors for selected coins. Omit parameters to fetch for all coins.</td>
                 </tr>
             </table>
         </section>
 
         <footer class="footer">
-            <p class="footer__author">Made by AvalancheLab</p>
-            <p>Built with 
+            <p class="footer__item footer__item--author">Made by AvalancheLab</p>
+            <p class="footer__item">Built with 
                 <a target="_blank" rel="noopener noreferrer" href="http://www.freepik.com">Node-Vibrant</a> and 
                 <a target="_blank" rel="noopener noreferrer" href="http://www.coingecko.com/api">CoinGecko's API.</a>
             </p>
-            <p class="footer__bg"><a target="_blank" rel="noopener noreferrer" href="http://www.freepik.com">Background designed by Freepik</a></p>
+            <p class="footer__item footer__item--bg"><a target="_blank" rel="noopener noreferrer" href="http://www.freepik.com">Background designed by Freepik</a></p>
         </footer>
     </main>
     <script defer src="./js/urlFetch.js"></script>
