@@ -111,7 +111,9 @@ button:hover{
 }
 
 .table{
-    margin-top: 3em;
+    padding: 0.5em 0;
+    margin-top: 1.5em;
+    background: rgb(126, 138, 170)
 }
 .table__row{
     padding: 5em;
@@ -125,7 +127,7 @@ button:hover{
     padding: 0.5em 1.5em;
     vertical-align: text-top;
     text-align: left;
-    background: rgba(35, 43, 65, 0.7);
+    /* background: rgba(35, 43, 65, 0.7); */
 }
 .table__item--request{
     font-weight: bold;
