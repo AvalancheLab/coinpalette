@@ -76,6 +76,7 @@ main{
     background-color: rgb(255, 255, 255, 0.7);
     text-transform: uppercase;
     min-width: 9em;
+    min-height: 2.75em;
     flex-grow: 1;
     padding: 0.25em;
     border-left: 1px solid var(--white);
@@ -93,9 +94,11 @@ button:hover{
     border: 1px solid var(--white);
     /* border-radius: 3px; */
     box-shadow: 2em 2em 5em rgba(14, 17, 26, 0.7);
+    
 }
 
 .response{
+    z-index: -1;
     background: rgba(35, 43, 65, 0.7);
     padding: 2em;
     margin-top: 1.5em;
@@ -112,6 +115,7 @@ button:hover{
 .table{
     margin-top: 1.5em;
     background: rgba(35, 43, 65, 0.7);
+    
 }
 
 
