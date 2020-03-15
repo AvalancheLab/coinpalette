@@ -1,31 +1,35 @@
 :root {
+    font-size: 6.25%; /* Make 1rem equal to 1px. */
+
     --screen-max: 500;
     --screen-min: 320;
+
+    --base-unit: 1rem;
     --h1-max: 66;
-    --h1-min: 60;
+    --h1-min: 41;
     --h2-max: 18;
-    --h2-min: 14;
-    --h3-max: 0;
-    --h3-min: 0;
-    --h4-max: 0;
-    --h4-min: 0;
-    --p-max: 12;
+    --h2-min: 11;
+    --h3-max: 13;
+    --h3-min: 13;
+    --h4-max: 13;
+    --h4-min: 13;
+    --p-max: 13;
     --p-min: 11;
-    font-size: 6.25%; /* Make 1rem equal to 1px. */
+}
+
+body{
+    font-size: 16rem;
 }
 
 * { 
-    --responsive: calc((var(--min-size) * 1rem) + (calc(var(--max-size) - var(--min-size)) * ((100vw - 320px) / (var(--screen-max) - var(--screen-min)))));
+    --responsive: calc(var(--base-unit) * var(--min-size)  + (var(--max-size) - var(--min-size)) * ((100vw - var(--screen-min) * 1px) / (var(--screen-max) - var(--screen-min))));
 }
 
-body {
-    font-size: 12rem;
-}
 
 h1 {
     --min-size: var(--h1-min);
     --max-size: var(--h1-max);
-    font-size: var(--responsive);
+    font-size: calc(var(--responsive));
 }
 
 h2 {
@@ -37,7 +41,7 @@ h2 {
 h3 {
     --min-size: var(--h3-min);
     --max-size: var(--h3-max);
-    font-size: var(--responsive);
+    font-size: calc(var(--responsive));
 }
 
 h4{
@@ -52,21 +56,27 @@ p {
     font-size: var(--responsive);
 }
 
-@media (min-width: calc(var(--screen-max) * 1px)) {
-    h1 {font-size: var(--h1-max)}
-    h2 {font-size: var(--h2-max)}
-    h3 {font-size: var(--h3-max)}
-    h4 {font-size: var(--h4-max)}
-    p  {font-size: var(--p-max)}
+
+@media only screen and (max-width: 320px) {
+    h1 {font-size: calc(var(--h1-min) * var(--base-unit))}
+    h2 {font-size: calc(var(--h2-min) * var(--base-unit))}
+    h3 {font-size: calc(var(--h3-min) * var(--base-unit))}
+    h4 {font-size: calc(var(--h4-min) * var(--base-unit))}
+    p  {font-size: calc(var(--p-min)  * var(--base-unit))}
 }
 
-@media (min-width: calc(var(--screen-min) * 1px)) {
-    h1 {font-size: var(--h1-min)}
-    h2 {font-size: var(--h2-min)}
-    h3 {font-size: var(--h3-min)}
-    h4 {font-size: var(--h4-min)}
-    p  {font-size: var(--p-min)}
+@media only screen and (min-width: 500px)  {
+    h1 {font-size: calc(var(--h1-max) * var(--base-unit))}
+    h2 {font-size: calc(var(--h2-max) * var(--base-unit))}
+    h3 {font-size: calc(var(--h3-max) * var(--base-unit))}
+    h4 {font-size: calc(var(--h4-max) * var(--base-unit))}
+    p  {font-size: calc(var(--p-max)  * var(--base-unit))}
 }
+
+
+
+
+
 
 
 
