@@ -9,10 +9,6 @@
     font-variant-numeric: normal;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
-
 body{
     height: 100%;
     width: 100%;
