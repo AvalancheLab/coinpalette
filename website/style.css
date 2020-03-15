@@ -11,8 +11,7 @@
 
 body {
     color: var(--white);
-    background-color: rgba(35, 43, 65, 1);
-    background-image: url('./assets/background.png') center center;
+    background: url('./assets/background.png') center center, rgba(35, 43, 65, 1);
     background-size: cover;
     background-repeat: no-repeat;
 }
