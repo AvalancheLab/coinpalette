@@ -1,0 +1,83 @@
+:root {
+    font-size: 6.25%; /* Make 1rem equal to 1px. */
+    --base-unit: 1rem;
+    --screen-max: 1920;
+    --screen-min: 320;
+    --L5-max: 66;
+    --L5-min: 41;
+    --L4-max: 18;
+    --L4-min: 11;
+    --L3-max: 13;
+    --L3-min: 13;
+    --L2-max: 13;
+    --L2-min: 13;
+    --L1-max: 13;
+    --L1-min: 11;
+}
+
+body {
+    font-size: 16rem;
+}
+
+* { 
+    --responsive: calc(var(--base-unit) * var(--min-size)  + (var(--max-size) - var(--min-size)) * ((100vw - var(--screen-min) * 1px) / (var(--screen-max) - var(--screen-min))));
+}
+
+
+h1 {
+    --min-size: var(--h1-min);
+    --max-size: var(--h1-max);
+    font-size: calc(var(--responsive));
+}
+
+h2 {
+    --min-size: var(--h2-min);
+    --max-size: var(--h2-max);
+    font-size: var(--responsive);
+}
+
+h3 {
+    --min-size: var(--h3-min);
+    --max-size: var(--h3-max);
+    font-size: calc(var(--responsive));
+}
+
+h4{
+    --min-size: var(--h4-min);
+    --max-size: var(--h4-max);
+    font-size: var(--responsive);
+}
+
+p {
+    --min-size: var(--p-min);
+    --max-size: var(--p-max);
+    font-size: var(--responsive);
+}
+
+
+@media only screen and (max-width: 320px) {
+    h1 {font-size: calc(var(--h1-min) * var(--base-unit))}
+    h2 {font-size: calc(var(--h2-min) * var(--base-unit))}
+    h3 {font-size: calc(var(--h3-min) * var(--base-unit))}
+    h4 {font-size: calc(var(--h4-min) * var(--base-unit))}
+    p  {font-size: calc(var(--p-min)  * var(--base-unit))}
+}
+
+@media only screen and (min-width: 500px)  {
+    h1 {font-size: calc(var(--h1-max) * var(--base-unit))}
+    h2 {font-size: calc(var(--h2-max) * var(--base-unit))}
+    h3 {font-size: calc(var(--h3-max) * var(--base-unit))}
+    h4 {font-size: calc(var(--h4-max) * var(--base-unit))}
+    p  {font-size: calc(var(--p-max)  * var(--base-unit))}
+}
+
+
+
+
+
+
+
+
+
+
+
