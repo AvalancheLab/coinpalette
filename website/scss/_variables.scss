@@ -1,3 +1,15 @@
+// Breakpoints
+$bpt-max: 1080px;
+$bpt-min: 320px;
+
+// Colours
+$primary:   hsl(200, 325%, 100%);
+$secondary: hsl(200, 325%, 100%);
+$tertiary:  hsl(200, 325%, 100%);
+$dark:      hsl(200, 325%, 100%);
+$light:     hsl(200, 325%, 100%);
+
+// Typography
 $mdc-typography-styles-headline1: (  font-family: unquote("Poppins"),  font-size: 93);
 $mdc-typography-styles-headline2: (  font-family: unquote("Poppins"),  font-size: 58);
 $mdc-typography-styles-headline3: (  font-family: unquote("Poppins"),  font-size: 47);
@@ -11,8 +23,3 @@ $mdc-typography-styles-subtitle2: (  font-family: unquote("Poppins"),  font-size
 $mdc-typography-styles-button: (  font-family: unquote("Roboto"),  font-size: 14);
 $mdc-typography-styles-overline: (  font-family: unquote("Roboto"),  font-size: 10);
 $mdc-typography-styles-caption: (  font-family: unquote("Roboto"),  font-size: 12);
-
-
-h1{
-    font-size: $mdc-typography-styles-headline1;
-}
