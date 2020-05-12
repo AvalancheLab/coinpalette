@@ -1,0 +1,17 @@
+/* Error: Invalid Sass identifier ""
+ *   ,
+ * 6 | @use 'sections/landing/';
+ *   | ^^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   scss\main.scss 6:1  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Invalid Sass identifier \"\"\a   \2577 \a 6 \2502  @use 'sections/landing/';\d\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   scss\\main.scss 6:1  root stylesheet";
+}

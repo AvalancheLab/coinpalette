@@ -1,6 +1,33 @@
-@import '_resets.scss';
-@import '_utils.scss';
-@import '_variables.scss';
+@use 'base/reset';
+@use 'base/layout';
+@use 'base/colours';
+@use 'base/typography';
+
+@use 'sections/landing/';
+@use 'docs.scss';
+
+
+* {
+    border-radius: layout.$unit * 0.5;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Roboto';
+    padding: layout.$unit * 15;
+    background-color: colours.$light;
+    color: colours.$dark;
+}
+
+.grid {
+    position: absolute;
+    margin: 0;
+    padding:0;
+}
+
+
+
+
 
 
 

@@ -1,15 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet"> 
-    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
-    <title>CoinPalette</title>
-</head>
-<body>
-  
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <title>CoinPalette</title>
+    </head>
+    <body class="body">
+        <img class="grid" src="8px grid.png">
+        <section class="hero">
 
+            <header class="header">
+                <div class="header__ident">
+                    <img class="ident__logo" src='assets/icons/palette.svg'>
+                    <h5 class="ident__text">CoinPalette</h5>
+                </div>
+                <nav class="header__nav nav">
+                    <a href="#!"><p>Source Code</p></a>
+                    <button class="nav__button">Share</button>
+                </nav>
+            </header>
+
+            <!-- <div class="hero__main">
+                
+                <div class="hero__left">
+                    <h1>Get Cryptocurrency <br> Logo Color Palettes</h1>
+                    <h4>A simple API offering 5 color variants in <span class="bold">RGB, HEX </span> and <span class="bold">HSL</span></h4>
+
+                    <div class="demo">
+                        <h4 class="demo__request">
+                            <span class="demo__coin">Bitcoin</span>
+                            <span class="demo__slash">/</span> 
+                            <span class="demo__format">RGB</span>
+                        </h4>
+                        <img class="demo__icon" src="./assets/icons/enter.svg">
+                        <code class="demo__response">
+                            Vibrant : [255, 125, 85],
+                            Muted : [212, 63, 192] . . .
+                        </code>
+                    </div>
+
+                    <p>Current Version &mdash; V1.0</p>
+                    <p>To request additional functionality, submit a pull request here.</p>
+                </div>
+
+                <img src="./assets/icons/graphic.svg" alt="">
+            </div> -->
+        </section>
+
+        <section class="docs">
+
+            <nav class="docs__nav">
+                <h3>Contents</h3>
+                <a><p>Example</p></a>
+                <a><p>Endpoints</p></a>
+            </nav>
+
+            <div class="docs__separator"></div>
+
+            <h2>API V1.0</h2>
+            <p>CoinPalette is a simple REST API offering color palettes for cryptocurrency logos. Use cases include: graphs, charts and static sites.</p>
+            <h3>Example</h3>
+            <p>An example request and JSON response with fields for each color variant.</p>
+
+            <div class="box">
+                <p class="box__header">Request</p>
+                <code class="box__content">
+                    https://www.coinpalette.com/colors?coins=bitcoin,format=rgb  
+                </code>
+            </div>
+
+            <h3>Endpoints</h3>
+            <p>List of API endpoints and respective parameters. * = Required Parameter </p>
+
+        </section>
+
+    </body>
 </html>
