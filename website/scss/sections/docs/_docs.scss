@@ -1,0 +1,15 @@
+@use './base/layout';
+
+.docs {
+    margin-top: layout.$unit * 20;
+    max-width: layout.$unit * 96; 
+    margin: 0 auto;
+}
+
+.docs__nav {
+
+}
+
+.docs__separator {
+    
+}

@@ -1,0 +1,16 @@
+@use '../base/colours';
+@use '../base/layout';
+
+.box {
+    margin-top: layout.$unit * 3;
+}
+
+.box__header {
+    background: linear-gradient(90deg, colours.$primary, colours.$secondary);
+    padding: layout.$unit * 1 layout.$unit * 2;
+}
+
+.box__content {
+    background: colours.$dark;
+    padding: layout.$unit * 1 layout.$unit * 2;
+}
