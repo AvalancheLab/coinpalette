@@ -1,5 +1,5 @@
-@use './layout';
-@use '../base/colours';
+@use 'layout';
+@use 'colours';
 
 h1 {
     margin-top: layout.$unit * 14;
@@ -9,20 +9,6 @@ h1 {
     font-weight: 900;
     letter-spacing: -0.04em;
 }
-h2 {
-    margin-top: layout.$unit * 12;
-    font-size: 58px;
-    font-family: 'Poppins';
-}
-h3 {
-    margin-top: layout.$unit * 10;
-    font-size: 47px;
-    font-family: 'Poppins';
-}
-h4 {
-    margin-top: layout.$unit * 8;
-    font-size: 33px;
-    font-family: 'Poppins';
     letter-spacing: -0.06em;
 }
 h5 {

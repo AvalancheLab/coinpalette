@@ -14,5 +14,10 @@
     "express": "^4.17.1",
     "node-fetch": "^2.6.0",
     "node-vibrant": "^3.1.5"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "sass": "^1.26.5"
   }
 }

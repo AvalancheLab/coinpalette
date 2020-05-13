@@ -1,5 +1,5 @@
-@use '../utils/flexbox';
-@use '../base/layout';
+@use '../../base/layout';
+@use '../../base/utils';
 
 @mixin flexCenter ($direction : row) {
     display: flex;

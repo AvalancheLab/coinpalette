@@ -1,8 +1,5 @@
-@use '../base/colours';
-
-@use 'demo';
-@use 'header';
-
+@use '../../base/layout';
+@use '../../base/colours';
 
 .hero {
     background: linear-gradient(90deg, colours.$primary, colours.$secondary);

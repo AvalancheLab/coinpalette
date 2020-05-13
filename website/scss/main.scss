@@ -3,8 +3,8 @@
 @use 'base/colours';
 @use 'base/typography';
 
-@use 'sections/landing/';
-@use 'docs.scss';
+@use 'sections/landing';
+@use 'sections/docs';
 
 
 * {

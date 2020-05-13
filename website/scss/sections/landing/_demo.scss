@@ -1,17 +1,18 @@
-@use '../base/colours' as colours;
-@use '.../base/layout';
+@use '../../base/colours';
+@use '../../base/layout';
+@use '../../base/utils';
 
 .demo {
     background-color: colours.$light;
     width: layout.$unit * 94;
     height: layout.$unit * 16;
-    box-shadow: layout.$unit * 5 layout.$unit * 5 layout.$unit * 15 $primary;
+    box-shadow: layout.$unit * 5 layout.$unit * 5 layout.$unit * 15 colours.$primary;
     margin-top: layout.$unit * 10;
 }
 
 .demo {
     color: colours.$primary;
-    @include flexCenter;
+    // @include flexCenter;
     justify-content: space-between;
     padding: 0 layout.$unit * 8;
 }
