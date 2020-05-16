@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colours } from './theme';
+import { colours } from '../styles/theme';
 
 export default Footer = () => {
 
@@ -11,23 +11,23 @@ export default Footer = () => {
         justify-content: space-between;    
     `
 
-    const Author = styled.p`
+    const Left = styled.p`
 
     `
 
-    const Copyright = styled.p`
+    const Center = styled.p`
         font-weight: bold;
     `
 
-    const Tools = styled.p`
+    const Right = styled.p`
 
     `
 
     return (
         <Footer>
-            <Author>Made by AvalancheLab</Author>
-            <Copyright>CoinPalette</Copyright>
-            <Tools>Built with Node-Vibrant and Coingecko's V3 API</Tools>
+            <Left>Made by AvalancheLab</Left>
+            <Center>CoinPalette</Center>
+            <Right>Built with Node-Vibrant and Coingecko's V3 API</Right>
         </Footer>
     )
 }
