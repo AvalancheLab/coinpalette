@@ -1,0 +1,16 @@
+{
+    "methods" : [
+        {
+            "type" : "GET",
+            "path" : "/coins",
+            "description" : "Get a list of all available coins.",
+            "parameters" : ""
+        },
+        {
+            "type" : "",
+            "path" : "/colors",
+            "description" : "Get colors for specified coins and color format.",
+            "parameters" : ""
+        }
+    ]
+}
