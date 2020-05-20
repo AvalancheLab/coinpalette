@@ -3,15 +3,19 @@ import styled from 'styled-components'
 import Underlined from '../components/Underlined'
 import { colours } from '../data/variables'
 import Box from '../components/Box'
-import APILogo from '../assets/twoway.svg'
+import APILogo from '../assets/books.svg'
 import Article from '../components/common/Article'
 import Method from '../components/Method'
+import { fluid } from '../styles/Utils'
 
 
 const Container = styled.div`
     color: ${colours.dark};
     max-width: 568rem;   
-    margin: 120rem auto;
+    margin: 0 auto;
+    padding: 0 16rem;
+    ${fluid('padding-top', '72rem', '120rem')};
+    ${fluid('padding-bottom', '72rem', '120rem')};
 `
 
 const Title = styled.div`
@@ -43,7 +47,7 @@ export default function Docs() {
             <Title>
                 <TitleLogo src={APILogo}></TitleLogo>
                 <Underlined color={colours.light2}>
-                    <TitleText>API V1.0</TitleText>
+                    <TitleText>Usage</TitleText>
                 </Underlined>
             </Title>
             <Article>
@@ -59,12 +63,8 @@ export default function Docs() {
                 </Box>
                 <h4>Endpoints</h4>
                 <p>List of API endpoints and respective parameters. * = Required Parameter.</p>
-                <Method type="GET" path="/coins" description>
-
-                </Method>
-                <Method type="GET" path="/coins">
-
-                </Method>
+                <Method type="GET" path="/coins" description="Fetch a list of all available cryptocurrencies."/>
+                <Method type="GET" path="/colors" description="Fetch color palettes for specified coins and color format."/>
             </Article>
         </Container>
     )

@@ -10,12 +10,18 @@ const Container = styled.div`
 `
 
 const Left = styled.div`
-    @media (max-width: 800px) {
+    @media (max-width: 1350px) {
         text-align: center;
     }
 `
 
-const Title = styled.h1``
+const Title = styled.h1`
+     @media (max-width: 1350px) {
+        display: grid;
+        place-items: center;
+    }
+
+`
 
 const SubTitle = styled.h3`
     margin-top: 32rem;
@@ -29,7 +35,7 @@ const Version = styled.div`
 const Graphic = styled.img`
     height : 464rem;
     margin-top: 32rem;
-    @media (min-width: 800rem) {
+    @media (max-width: 1350px) {
         display: none;
     }
 `

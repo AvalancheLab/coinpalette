@@ -1,21 +1,12 @@
-import { css } from 'styled-components'
 import { breakpoints } from '../data/variables'
-import { fontScalingFactor } from '../data/variables'
 
 function stripUnit (string) {
     const digitMatch = /\d*/;
     return parseFloat(digitMatch.exec(string).join());
 }
 
-function flexCenter () {
-    return `
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    `
-}
 
-function fluid (variable, min=null, max=null) {
+export function fluid (variable, min=null, max=null) {
 
     if (!variable) {
         throw new Error('Variable undefined.')
@@ -27,23 +18,16 @@ function fluid (variable, min=null, max=null) {
 
     return (
     `
-        ${variable} : calc(${min} + ${valueDiff} * (calc(100vw - ${breakpoints.min}) / ${screenDiff}));
+        ${variable} : calc(${min} + ${valueDiff} * (calc(100vw - ${breakpoints.min}px) / ${screenDiff}));
 
-        @media only screen and (min-width: ${breakpoints.max}) {
+        @media only screen and (min-width: ${breakpoints.max}px) {
             ${variable} : ${max}; 
         }
 
-        @media only screen and (max-width: ${breakpoints.min}) {
+        @media only screen and (max-width: ${breakpoints.min}px) {
             ${variable} : ${min};
         }
     `
     )
     
 }
-
-function fontSize(level) {
-    1.086
-}
-
-
-module.exports = {fluid, flexCenter} 

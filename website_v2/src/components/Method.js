@@ -7,21 +7,28 @@ export default function Method ({ type, path, description }) {
 
     const Container = styled.div`
         display:flex;
+        align-items: center;
+        color: ${colours.dark};
+        margin-top: 24rem;
     `
 
-    const Box = styled.div`
+    const Box = styled.p`
         display: flex;
         align-items:center;
         justify-content: center;
         padding: 8rem 16rem;
+        color: ${colours.light};
     ` 
 
     const Method = styled(Box)`
-        background-color: ${colours.primary};
+        border-radius: 4rem 0 0 4rem;
+        background: ${colours.dark2};
     `
 
     const Path = styled(Box)`
-        background-color: ${colours.secondary};
+        border-radius: 0 4rem 4rem 0;
+        background-color: ${colours.dark};
+        margin-right: 16rem;
     `
 
     return (

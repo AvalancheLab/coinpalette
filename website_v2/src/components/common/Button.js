@@ -10,6 +10,6 @@ const ButtonElement = styled.button`
     height: 40rem;
 `
 
-export default function Button ({ children }) {
-    return <ButtonElement>{children}</ButtonElement>
+export default function Button ({ children, className }) {
+    return <ButtonElement className={className}>{children}</ButtonElement>
 }
