@@ -1,7 +1,6 @@
 import { unit } from '../data/variables'
-import styled  from 'styled-components'
 
-export default `
+module.exports = `
     h1  {
         
     }
@@ -28,7 +27,5 @@ export default `
     }
 
 `
-// export default function TypographicRhythm ({ children }) {
-//     return <Rhythm>{ children }</Rhythm>
-// }
+
     

@@ -1,5 +1,6 @@
 import { css } from 'styled-components'
 import { breakpoints } from '../data/variables'
+import { fontScalingFactor } from '../data/variables'
 
 function stripUnit (string) {
     const digitMatch = /\d*/;
@@ -38,6 +39,10 @@ function fluid (variable, min=null, max=null) {
     `
     )
     
+}
+
+function fontSize(level) {
+    1.086
 }
 
 

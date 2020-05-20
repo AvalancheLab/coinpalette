@@ -12,6 +12,7 @@ export default createGlobalStyle`
         text-decoration: none;
         color: inherit;
         font-weight: inherit;
+        font-family: inherit;
         font-variant-numeric: normal;
     }
 
