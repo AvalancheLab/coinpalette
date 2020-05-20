@@ -1,13 +1,7 @@
 # CoinPalette
 
 
-A simple API for fetching cryptocurrency logo colours. Ideal for use with static sites where typical server side image processing is not possible/feasible. 
+A simple API for fetching cryptocurrency logo colour palettes. 
 
 Live site: https://www.coinpalette.com/
 
-## API
-
-| Method | Path | Description | Parameters | Example |
-| --- | --- | --- | --- | --- |
-| GET | `/list` | Returns list of all coins. | None | `https://www.coinpalette.com/list` |
-| GET | `/colors` | Return colors for specified coins. Omit parameters to request for all coins. | Comma separated list of coin names. | `https://www.coinpalette.com/colors?bitcoin,litecoin,ethereum` |
