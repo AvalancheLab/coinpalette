@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Ident from './Ident';
 import Button from '../components/common/Button'
-import NavItem from '../components/common/NavItem'
+import Link from '../components/common/Link'
 import BurgerIcon from '../assets/burger.svg'
 
 const Container = styled.div`
@@ -29,10 +29,8 @@ const Burger = styled.img`
 `
 
 const ShareButton = styled(Button)`
-    margin-left: 24rem;
+    margin-left: 16rem;
 `
-
-
 
 export default function NavBar() {
     return (
@@ -40,8 +38,12 @@ export default function NavBar() {
             <Ident/>
             <Burger src={BurgerIcon}/>
             <Nav>
-                <NavItem link="#!">Source Code</NavItem>
-                <ShareButton href="#!">SHARE</ShareButton>
+                <Link data-url="https://www.coinpalette.com" to="https://github.com/AvalancheLab/coinpalette"><p>Source Code</p></Link>
+                <Link to="http://www.twitter.com/share?url=https://www.coinpalette.com/">
+                    <ShareButton >
+                        SHARE
+                    </ShareButton>
+                </Link>
             </Nav>
         </Container>
     )

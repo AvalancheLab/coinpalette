@@ -63,8 +63,10 @@ export default function Docs() {
                 </Box>
                 <h4>Endpoints</h4>
                 <p>List of API endpoints and respective parameters. * = Required Parameter.</p>
-                <Method type="GET" path="/coins" description="Fetch a list of all available cryptocurrencies."/>
-                <Method type="GET" path="/colors" description="Fetch color palettes for specified coins and color format."/>
+                <Method type="GET" path="/coins" summary="Fetch a list of coins."/>
+                <Method type="GET" path="/colors" summary="Fetch color palettes."/>
+                <p><strong>coins*</strong> &mdash; List of cryptocurrencies.</p>
+                <p><strong>format*</strong> &mdash; Specified color format.</p>
             </Article>
         </Container>
     )

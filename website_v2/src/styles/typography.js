@@ -5,7 +5,6 @@ import { fluid } from './Utils'
 export default createGlobalStyle` 
 
     :root {
-        
         font-family : 'Roboto';
     }
 
@@ -67,6 +66,10 @@ export default createGlobalStyle`
         font-family: 'Roboto Mono';
         line-height : 1.6;
         white-space: pre;
+    }
+
+    strong {
+        font-weight: bold;
     }
 
     a:active {

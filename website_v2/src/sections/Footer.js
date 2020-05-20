@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Ident from '../components/Ident'
 import { colours, breakpoints } from '../data/variables'
 import { fluid } from '../styles/Utils'
+import Link from '../components/common/Link'
 
 
 const Background = styled.div`
@@ -43,8 +44,8 @@ export default function Footer() {
         <Background>
             <Container>
                 <IdentNew/>
-                <h6>Made by <a href="#!">AvalancheLab</a></h6>
-                <p>Powered by <a href="#!">Node-Vibrant</a> and <a href="#!">Coingecko's V3 API</a></p>
+                <h6>Made by <Link to="https://github.com/AvalancheLab">AvalancheLab</Link></h6>
+                <p>Powered by <Link to="https://www.npmjs.com/package/node-vibrant">Node-Vibrant</Link> and <Link href="https://www.coingecko.com/en/api">Coingecko's V3 API</Link></p>
             </Container>
         </Background>
     )

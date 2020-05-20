@@ -2,12 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import { colours } from '../data/variables'
 import { fluid } from '../styles/Utils'
-// import { Scrollbars } from 'react-custom-scrollbars';
 
 
 const Container = styled.div`
     margin-top: 24rem;
-    margin-bottom: 48rem;
+    margin-bottom: 64rem;
     /* border: 0.5px solid ${colours.light2}; */
     box-shadow: 16rem 24rem 48rem ${colours.light3};
 `
@@ -28,7 +27,7 @@ const Content = styled.div`
     ${fluid('padding-bottom', '16rem', '24rem')}
     ${fluid('padding-right', '24rem', '32rem')}
     ${fluid('padding-left', '24rem', '32rem')}
-    overflow-x: scroll;
+    overflow-x: auto;
 `
 
 
