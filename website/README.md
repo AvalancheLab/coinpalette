@@ -1,1 +1,0 @@
-# coinpalette.com
