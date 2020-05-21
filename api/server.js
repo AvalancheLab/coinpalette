@@ -1,13 +1,14 @@
 const express = require('express');
-const path = require('path');
-const app = express();
-const API = require('./routes/api');
+const server = express();
+const API_Router = require('./routes/api');
+const logger = require('./middleware/logger');
 
-app.use(API);
+server.use(logger); 
+server.use(API_Router);
 
 // Handles any requests that don't match the ones above.
-app.get('*', ( _, res ) => res.sendStatus(404));
+server.get('*', ( _, res ) => res.sendStatus(404));
 
-app.listen(3000);
+server.listen(3000);
 
 
