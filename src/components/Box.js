@@ -23,11 +23,13 @@ const Header = styled.h6`
 const Content = styled.div`
     color : ${colours.dark2};
     background: ${colours.light};
+    /* border: 1px solid ${colours.dark3}; */
     ${fluid('padding-top', '16rem', '24rem')}
     ${fluid('padding-bottom', '16rem', '24rem')}
     ${fluid('padding-right', '24rem', '32rem')}
     ${fluid('padding-left', '24rem', '32rem')}
     overflow-x: auto;
+    /* text-shadow: 0rem 0rem 16rem ${colours.light3}; */
 `
 
 

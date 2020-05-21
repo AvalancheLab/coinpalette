@@ -14,8 +14,8 @@ const Container = styled.div`
     max-width: 568rem;   
     margin: 0 auto;
     padding: 0 16rem;
-    ${fluid('padding-top', '72rem', '120rem')};
-    ${fluid('padding-bottom', '72rem', '120rem')};
+    ${fluid('padding-top', '48rem', '120rem')};
+    ${fluid('padding-bottom', '48rem', '120rem')};
 `
 
 const Title = styled.div`

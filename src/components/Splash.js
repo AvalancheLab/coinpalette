@@ -8,6 +8,7 @@ import { fluid } from '../styles/Utils'
 const Container = styled.div`
     margin-top: 80rem;
     display: grid;
+    /* grid-auto-rows: minmax(auto-fill, 1fr); */
     grid-template-areas: 
         "title    graphic"
         "subtitle graphic"
@@ -25,12 +26,6 @@ const Container = styled.div`
    
 `
 
-// const Left = styled.div`
-//     @media (max-width: 1350px) {
-//         text-align: center;
-//     }
-// `
-
 const Title = styled.h1`
      @media (max-width: 1350px) {
         display: grid;
@@ -40,13 +35,14 @@ const Title = styled.h1`
 `
 
 const SubTitle = styled.h3`
-    margin-top: 32rem;
+    margin-top: 16rem;
     max-width: 672rem;
     grid-area: subtitle;
 `
 
 const Version = styled.div`
-    margin-top: 80rem;
+    ${fluid('margin-top', '40rem', '80rem')}
+    /* margin-top: 80rem; */
     grid-area: version;
 `
 
