@@ -6,7 +6,7 @@ function stripUnit (string) {
 }
 
 
-export function fluid (variable, min=null, max=null) {
+export function fluid (variable, min, max, bkptMin, bkptMax) {
 
     if (!variable) {
         throw new Error('Variable undefined.')
@@ -16,15 +16,18 @@ export function fluid (variable, min=null, max=null) {
     const valueDiff = stripUnit(max) - stripUnit(min)
     const screenDiff = stripUnit(breakpoints.max) - stripUnit(breakpoints.min)
 
+    const breakpointMin = bkptMin ? bkptMin : breakpoints.min;
+    const breakpointMax = bkptMax ? bkptMax : breakpoints.max;
+
     return (
     `
-        ${variable} : calc(${min} + ${valueDiff} * (calc(100vw - ${breakpoints.min}px) / ${screenDiff}));
+        ${variable} : calc(${min} + ${valueDiff} * (calc(100vw - ${breakpointMin}px) / ${screenDiff}));
 
-        @media only screen and (min-width: ${breakpoints.max}px) {
-            ${variable} : ${max}; 
+        @media only screen and (min-width: ${breakpointMax}px) {
+            ${variable} : ${max}; , bkptMax
         }
 
-        @media only screen and (max-width: ${breakpoints.min}px) {
+        @media only screen and (max-width: ${breakpointMin}px) {
             ${variable} : ${min};
         }
     `
