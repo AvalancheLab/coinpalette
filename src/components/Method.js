@@ -7,7 +7,7 @@ const Header = styled.div`
     display:flex;
     align-items: center;
     color: ${colours.dark};
-    margin-top: 32rem;
+    margin-top: 16rem;
     margin-bottom: 16rem;
 `
 

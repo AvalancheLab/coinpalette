@@ -5,10 +5,10 @@ import { fluid } from '../styles/Utils'
 
 
 const Container = styled.div`
-    margin-top: 24rem;
-    margin-bottom: 64rem;
+    margin-top: 32rem;
+    margin-bottom: 32rem;
     /* border: 0.5px solid ${colours.light2}; */
-    box-shadow: 16rem 24rem 48rem ${colours.light3};
+    box-shadow: 16rem 8rem 48rem ${colours.light3};
 `
 const Header = styled.h6`
     ${fluid('padding-top', '16rem', '16rem')}
