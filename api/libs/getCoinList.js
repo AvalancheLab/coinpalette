@@ -1,7 +1,6 @@
 const coinColors = require('../colors/coinColors.json');
 
-function getCoinList () {
+module.exports.coins = function () {
     return {"coins": Object.keys(coinColors)};
 }
 
-module.exports = getCoinList;
