@@ -9,7 +9,8 @@ router.get('/list', ( _, res ) => {
 });
 
 router.get('/colors', ( req, res ) => {
-    const args = req.query.coins;
+    console.log(req.params)
+    const args = req.params;
     const coins = args ? args.split(',') : [];
     const colors = getColors({ "coins": coins });
     res.json( colors );
