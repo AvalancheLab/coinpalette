@@ -1,5 +1,5 @@
 {
-  "name": "website_v2",
+  "name": "coinpalette",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,7 +8,6 @@
     "@testing-library/user-event": "^7.2.1",
     "express": "^4.17.1",
     "react": "^16.13.1",
-    "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "styled-components": "^5.1.0"
