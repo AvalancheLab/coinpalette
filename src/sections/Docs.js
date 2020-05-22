@@ -33,13 +33,33 @@ const TitleLogo = styled.img`
 `
 
 const response = 
-`"bitcoin" : {
-    "vibrant" : [122, 221, 174],		
-    "muted" : [122, 221, 174],		
-    "muted-dark" : [122, 221, 174],
-    "vibrant" : [122, 221, 174],
-    "muted" : [122, 221, 174]
-}`;
+
+`{
+    "bitcoin" : {
+        "vibrant" : {
+            "rgb" : [244, 148, 28],
+            "hex" : "#f4941c",
+            "hsl" : [0.09, 0.91, 0.53]
+        },		
+        "muted" : ...,		
+        "muted-dark" : ...,
+        "vibrant" : ...,
+        "muted" : ...
+    },
+
+    "ethereum" : {
+        "vibrant" : {
+            "rgb" : [244, 148, 28],
+            "hex" : "#f4941c",
+            "hsl" : [0.09, 0.91, 0.53]
+        },		
+        "muted" : ...,		
+        "muted-dark" : ...,
+        "vibrant" : ...,
+        "muted" : ...
+    }
+}
+`;
 
 export default function Docs() {
     return (
@@ -55,7 +75,7 @@ export default function Docs() {
                 <h4>Example</h4>
                 <p>An example API request specifying coins and color format:</p>
                 <Box title="Request">
-                    <code>https://www.coinpalette.com/colors?coins=bitcoin,format=rgb</code>
+                    <code>https://www.coinpalette.com/colors?coins=bitcoin,litecoin</code>
                 </Box>
                 <p>Corresponding JSON response with fields for each color variant:</p>
                 <Box title="Response">
@@ -65,8 +85,7 @@ export default function Docs() {
                 <p>List of API endpoints and respective parameters. * = Required Parameter.</p>
                 <Method type="GET" path="/coins" summary="Fetch a list of coins."/>
                 <Method type="GET" path="/colors" summary="Fetch color palettes."/>
-                <p><strong>coins*</strong> &mdash; List of cryptocurrencies.</p>
-                <p><strong>format*</strong> &mdash; Specified color format.</p>
+                <p><strong>coins*</strong> &mdash; List of cryptocurrencies you wish to fetch palettes for.</p>
             </Article>
         </Container>
     )
