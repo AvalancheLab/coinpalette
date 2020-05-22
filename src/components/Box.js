@@ -6,7 +6,7 @@ import { fluid } from '../styles/Utils'
 
 const Container = styled.div`
     margin-top: 32rem;
-    margin-bottom: 32rem;
+    margin-bottom: 48rem;
     /* border: 0.5px solid ${colours.light2}; */
     box-shadow: 16rem 8rem 48rem ${colours.light3};
 `
