@@ -4,7 +4,7 @@ const getColors  = require('./libs/getColors')
 const getCoinList = require('./libs/getCoins')
 const csvToArray = require('./libs/utils/csvToArray')
 
-router.get('/list', ( _, res ) => {
+router.get('/coins', ( _, res ) => {
     const coinList = getCoinList()
     res.json( coinList )
 });
