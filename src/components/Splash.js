@@ -61,7 +61,7 @@ export default function Splash() {
                 <Underlined color={colours.dark2}>Get Crypto Logo</Underlined>
                 <Underlined color={colours.dark2}>Color Palettes</Underlined>
             </Title>
-            <SubTitle>An API supporting over 7000 currencies in RGB, HEX & HSL color formats.</SubTitle>
+            <SubTitle>An API supporting over 5000 currencies in RGB, HEX & HSL color formats.</SubTitle>
             <Version>
                 <h5>Current Version &mdash; 1.0</h5>
                 <p>For feature requests or issues please visit the GitHub repo.</p>
