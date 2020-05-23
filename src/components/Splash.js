@@ -4,6 +4,7 @@ import Underlined from '../components/Underlined'
 import BitcoinAtom from '../assets/graphic.svg'
 import { colours } from '../data/variables'
 import { fluid } from '../styles/Utils'
+import Link from '../components/common/Link'
 
 const Container = styled.div`
     padding-top: 80rem;
@@ -63,7 +64,7 @@ export default function Splash() {
             <SubTitle>An API supporting over 5000 currencies in RGB, HEX & HSL color formats.</SubTitle>
             <Version>
                 <h5>Current Version &mdash; 1.0</h5>
-                <p>For feature requests or issues please visit the GitHub repo.</p>
+                <p>For feature requests or issues please visit the <Link to="https://github.com/avalanchelab/coinpalette">GitHub repo.</Link></p>
             </Version>
             <Graphic src={BitcoinAtom}></Graphic>
         </Container>
