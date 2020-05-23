@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import Underlined from '../components/Underlined'
 import { colours } from '../data/variables'
@@ -31,37 +31,30 @@ const TitleLogo = styled.img`
     height: 48rem;
     margin-right: 8rem;
 `
-
-const response = 
-
-`{
-    "bitcoin" : {
-        "vibrant" : {
-            "rgb" : [244, 148, 28],
-            "hex" : "#f4941c",
-            "hsl" : [0.09, 0.91, 0.53]
-        },		
-        "muted" : ...,		
-        "muted-dark" : ...,
-        "vibrant" : ...,
-        "muted" : ...
-    },
-
-    "ethereum" : {
-        "vibrant" : {
-            "rgb" : [244, 148, 28],
-            "hex" : "#f4941c",
-            "hsl" : [0.09, 0.91, 0.53]
-        },		
-        "muted" : ...,		
-        "muted-dark" : ...,
-        "vibrant" : ...,
-        "muted" : ...
-    }
-}
-`;
+const Input = styled.input`
+    background: ${colours.light};
+    width: 100%;
+`
 
 export default function Docs() {
+
+    const [fetchResponse, setFetchReponse] = useState('')
+    const [url, setUrl] = useState("/colors?coins=bitcoin")
+
+    useEffect(() => {
+        fetchData()
+    });
+
+    async function fetchData () {
+        const response = await fetch(url)
+        console.log(response)
+        const json = await response.json()
+        console.log(json)
+        const jsonString = JSON.stringify(json, null, 2)
+        console.log(jsonString)
+        setFetchReponse(jsonString ? jsonString : 'Error fetching data.')
+    }
+
     return (
         <Container>
             <Title>
@@ -75,11 +68,11 @@ export default function Docs() {
                 <h4>Example</h4>
                 <p>An example API request specifying coins and color format:</p>
                 <Box title="Request">
-                    <code>https://www.coinpalette.com/colors?coins=bitcoin,litecoin</code>
+                    <code><Input onChange={(event) => setUrl(event.target.value)} value={url}/></code>
                 </Box>
                 <p>Corresponding JSON response with fields for each color variant:</p>
                 <Box title="Response">
-                    <code>{response}</code>
+                    <code>{fetchResponse}</code>
                 </Box>
                 <h4>Endpoints</h4>
                 <p>List of API endpoints and respective parameters. * = Required Parameter.</p>
