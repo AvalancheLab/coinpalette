@@ -10,7 +10,7 @@ const colours = {
 
 const breakpoints = {
     "min" : 320,
-    "max" : 1200
+    "max" : 1500
 }
 
 const unit = (n) => `${Math.floor(n * 8)}px`
