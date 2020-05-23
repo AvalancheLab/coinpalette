@@ -66,7 +66,7 @@ export default function Docs() {
             <Article>
                 <p>CoinPalette is a simple REST API offering color palettes for cryptocurrency logos. Use cases include: graphs, charts and static sites.</p>
                 <h4>Example</h4>
-                <p>An example API request specifying coins and color format:</p>
+                <p>An example API request specifying coins and color format. Try it for yourself by editing the request below.</p>
                 <Box title="Request">
                     <code><Input onChange={(event) => setUrl(event.target.value)} value={url}/></code>
                 </Box>
