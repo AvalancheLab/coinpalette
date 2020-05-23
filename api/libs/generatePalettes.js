@@ -56,13 +56,18 @@ async function generatePalettes () {
         Object.keys(colors).forEach(variant => {
             const color = colors[variant];
             if (!color) return console.log(`Failed to get palettes for ${id}`)
-            const rgb = color.getRgb();
+            const rgb = roundToInt(color.getRgb());
             palettes[id][variant.toLowerCase()] = {
                 rgb : rgb,
                 hex : convert.rgb.hex(...rgb),
                 hsl : convert.rgb.hsl(...rgb)
             }
+
         })
+
+        function roundToInt (array) {
+            return array.map(val => Math.round(val))
+        }
     })).catch(err => new Error(err))
 
     console.log('Saving palettes to file...')
