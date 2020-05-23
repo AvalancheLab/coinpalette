@@ -34,7 +34,7 @@ const Container = styled.div`
 
 
 const IdentNew = styled(Ident)`
-    ${fluid('margin-bottom', '8rem', '16rem')}
+    ${fluid('margin-bottom', '0rem', '8rem')}
     opacity: 0.8;
 `
 

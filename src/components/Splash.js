@@ -8,7 +8,6 @@ import { fluid } from '../styles/Utils'
 const Container = styled.div`
     margin-top: 80rem;
     display: grid;
-    /* grid-auto-rows: minmax(auto-fill, 1fr); */
     grid-template-areas: 
         "title    graphic"
         "subtitle graphic"

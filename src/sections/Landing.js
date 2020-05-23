@@ -9,7 +9,7 @@ import { fluid } from '../styles/Utils'
 const Container = styled.div`
     color: ${colours.light};
     max-width: ${breakpoints.max}rem;   
-    ${fluid('margin-top', '16rem', '120rem')};
+    ${fluid('margin-top', '16rem', '80rem')};
     ${fluid('margin-bottom', '32rem', '80rem')};
     ${fluid('margin-left', '16rem', '80rem')};
     ${fluid('margin-right', '16rem', '80rem')};
