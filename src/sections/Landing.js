@@ -33,9 +33,9 @@ export default function Landing() {
     return (
         <Background>
             <Container>
-                <NavBar></NavBar>
-                <Splash></Splash>
-                <Arrow src={ArrowImage}></Arrow>
+                <NavBar/>
+                <Splash/>
+                <Arrow src={ArrowImage}/>
             </Container>
         </Background>
     )
