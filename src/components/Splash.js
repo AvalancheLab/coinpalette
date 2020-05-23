@@ -6,14 +6,14 @@ import { colours } from '../data/variables'
 import { fluid } from '../styles/Utils'
 
 const Container = styled.div`
-    margin-top: 80rem;
+    padding-top: 80rem;
     display: grid;
     grid-template-areas: 
         "title    graphic"
         "subtitle graphic"
         "version  graphic";
 
-    @media (max-width: 1350px) {
+    @media (max-width: 1200px) {
         text-align: center;
         place-items: center;
         grid-template-areas: 
@@ -26,7 +26,7 @@ const Container = styled.div`
 `
 
 const Title = styled.h1`
-     @media (max-width: 1350px) {
+     @media (max-width: 1200px) {
         display: grid;
         place-items: center;
     }
@@ -35,7 +35,7 @@ const Title = styled.h1`
 
 const SubTitle = styled.h3`
     margin-top: 16rem;
-    max-width: 672rem;
+    max-width: 620rem;
     grid-area: subtitle;
 `
 
@@ -46,7 +46,7 @@ const Version = styled.div`
 `
 
 const Graphic = styled.img`
-    ${fluid('height', '260rem', '464rem')}
+    ${fluid('height', '180rem', '464rem')}
     margin-top: 32rem;
     grid-area: graphic;
 `
