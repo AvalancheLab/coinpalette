@@ -32,7 +32,7 @@ const CloseButton = styled.button`
 export default function FlyoutMenu({ closeFlyout, children }) {
     return (
     <Container onMouseLeave={closeFlyout}>
-        <CloseButton onClick={closeFlyout}></CloseButton>
+        <CloseButton onClick={closeFlyout}/>
         {children}
     </Container>
     )
