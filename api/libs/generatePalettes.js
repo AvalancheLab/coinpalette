@@ -3,6 +3,7 @@ const { existsSync, mkdirSync, removeSync, writeFileSync } = require('fs-extra')
 const jsonFetch = require('./utils/jsonFetch')
 const downloadFile = require('./utils/downloadFile')
 const vibrant = require('node-vibrant')
+const convert = require('color-convert')
 
 // Generate palettes from downloaded logo images.
 async function generatePalettes () {
@@ -11,7 +12,7 @@ async function generatePalettes () {
     let coins = [];
     let i = 1
     while (true) {
-        console.log(`Fetching coins for page ${i}.`)
+        console.log(`Fetching coins for page ${i}...`)
         const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=${i}`;
         let result = await jsonFetch(url).catch(_ => [])
         // console.log(result)
@@ -28,7 +29,7 @@ async function generatePalettes () {
         mkdirSync(downloadFolder)
     }
 
-    // Download images.
+    console.log('Downloading images...')
     coins = await Promise.all(coins.map(async coin => {
         const localImagePath = path.join(downloadFolder, `${coin.id}.png`)
         if (!existsSync(localImagePath)) {
@@ -39,7 +40,7 @@ async function generatePalettes () {
     }))
     .catch(err => new Error(err));
 
-    // Generate palettes from downloaded images.
+    console.log('Generating palettes...')
     let palettes = {};
     coins.forEach(({ id }) => {
         palettes[id] = {}
@@ -55,18 +56,18 @@ async function generatePalettes () {
         Object.keys(colors).forEach(variant => {
             const color = colors[variant];
             if (!color) return console.log(`Failed to get palettes for ${id}`)
+            const rgb = color.getRgb();
             palettes[id][variant.toLowerCase()] = {
-                rgb : color.getRgb(),
-                hex : color.getHex(),
-                hsl : color.getHsl()
+                rgb : rgb,
+                hex : convert.rgb.hex(...rgb),
+                hsl : convert.rgb.hsl(...rgb)
             }
         })
     })).catch(err => new Error(err))
 
-    // Save palettes to JSON file.
+    console.log('Saving palettes to file...')
     writeFileSync(path.join(__dirname, "../colorList.json"), JSON.stringify(palettes))
 
-    // Delete temporary download folder.
     console.log('Finished.')
 }
 
