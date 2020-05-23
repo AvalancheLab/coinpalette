@@ -2,7 +2,7 @@
 
 ![Node.js CI](https://github.com/AvalancheLab/coinpalette/workflows/Node.js%20CI/badge.svg?branch=master)
 
-A simple API for fetching cryptocurrency logo colour palettes. Comprised of a REST API and accompanying website describing the service.
+A simple API for fetching cryptocurrency logo colour palettes. This project is Comprised of a simple REST API build with ExpressJS and accompanying website describing the service.
 
 Live site: https://www.coinpalette.com/
 
