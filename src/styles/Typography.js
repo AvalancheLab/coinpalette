@@ -85,5 +85,8 @@ export default createGlobalStyle`
     button:hover {
         background-color: ${colours.light3};
     }
+    input {
+        font-size: inherit;
+    }
 
 `
