@@ -10,7 +10,7 @@ const Container = styled.div`
     color: ${colours.light};
     width: 100%;
     max-width: ${breakpoints.max}rem;
-    ${fluid('padding-top', '16rem', '80rem')};
+    ${fluid('padding-top', '16rem', '104rem')};
     ${fluid('padding-bottom', '32rem', '80rem')};
     ${fluid('padding-left', '16rem', '160rem')};
     ${fluid('padding-right', '16rem', '160rem')};
