@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import Ident from './Ident';
 import Button from '../components/common/Button'
 import Link from '../components/common/Link'
 import BurgerIcon from '../assets/burger.svg'
+import FlyoutMenu from './FlyoutMenu';
 
 const Container = styled.div`
     display: flex;
+    position: relative;
 `
 
 const Nav = styled.nav`
@@ -33,17 +35,20 @@ const ShareButton = styled(Button)`
 `
 
 export default function NavBar() {
+
+    const [showFlyout, setShowFlyout] = useState(false);
+
     return (
         <Container>
             <Ident/>
-            <Burger src={BurgerIcon}/>
+            <Burger onClick={() => setShowFlyout(!showFlyout)} src={BurgerIcon}/>
+            {showFlyout ? <FlyoutMenu closeFlyout={() => setShowFlyout(!showFlyout)}>
+                <Link to="https://github.com/AvalancheLab/coinpalette"><p>Source Code</p></Link>
+                <Link to="http://www.twitter.com/share?url=https://www.coinpalette.com/"><p>SHARE</p></Link>
+            </FlyoutMenu> : null }
             <Nav>
-                <Link data-url="https://www.coinpalette.com" to="https://github.com/AvalancheLab/coinpalette"><p>Source Code</p></Link>
-                <Link to="http://www.twitter.com/share?url=https://www.coinpalette.com/">
-                    <ShareButton >
-                        SHARE
-                    </ShareButton>
-                </Link>
+                <Link to="https://github.com/AvalancheLab/coinpalette"><p>Source Code</p></Link>
+                <Link to="http://www.twitter.com/share?url=https://www.coinpalette.com/"><ShareButton >SHARE</ShareButton></Link>
             </Nav>
         </Container>
     )
