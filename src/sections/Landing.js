@@ -2,13 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 import NavBar from '../components/NavBar'
 import Splash from '../components/Splash'
-import { colours } from '../data/variables'
+import { colours, breakpoints } from '../data/variables'
 import ArrowImage from '../assets/arrow.svg'
 import { fluid } from '../styles/Utils'
 
 const Container = styled.div`
     color: ${colours.light};
     width: 100%;
+    max-width: ${breakpoints.max}rem;
     ${fluid('padding-top', '16rem', '80rem')};
     ${fluid('padding-bottom', '32rem', '80rem')};
     ${fluid('padding-left', '16rem', '160rem')};
