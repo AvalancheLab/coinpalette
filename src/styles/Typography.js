@@ -75,8 +75,15 @@ export default createGlobalStyle`
     a:active {
         color : ${colours.dark2};
     }
-    a:hover{
+    a:hover {
         color: ${colours.accent};
+    }
+
+    button:active {
+        background-color: ${colours.accent};
+    }
+    button:hover {
+        background-color: ${colours.light3};
     }
 
 `
