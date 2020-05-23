@@ -11,16 +11,18 @@ Live site: https://www.coinpalette.com/
 git clone https://www.github.com/AvalancheLab/coinpalette.git
 cd coinpalette
 ```
-To start the server, run
+
+Install dependencies:
 ```javascript
 npm install
-npm start
 ```
-To run the server persistently, run
+
+For development run:
 ```javascript
-npm start --persistent 
+npm run dev
 ```
-To view the website, go to
-```bash
-localhost:3000
+
+To deploy and serve run:
+```javascript
+npm run serve // Will run on port 3000
 ```
