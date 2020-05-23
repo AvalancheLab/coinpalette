@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { colours } from '../data/variables'
-import Burger from '../assets/burger.svg'
+import CloseBox from '../assets/closebox.svg'
 
 const Container = styled.div`
     margin: 0 auto;
@@ -19,7 +19,7 @@ const Container = styled.div`
     justify-content: center;
 `
 const CloseButton = styled.button`
-    background-image: url(${Burger});
+    background-image: url(${CloseBox});
     background-size: cover;
     height: 32rem;
     position: absolute;
