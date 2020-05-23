@@ -24,5 +24,5 @@ npm run dev
 
 To deploy and serve run:
 ```javascript
-npm run serve // Will run on port 3000
+npm run build && npm run serve  // Will run on port 3000
 ```
