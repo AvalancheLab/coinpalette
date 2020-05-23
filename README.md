@@ -12,7 +12,7 @@ git clone https://www.github.com/AvalancheLab/coinpalette.git
 cd coinpalette
 ```
 
-Install dependencies:
+Install dependencies. Make sure your node & npm are up to date.
 ```javascript
 npm install
 ```
