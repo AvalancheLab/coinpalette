@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import LogoFile from '../assets/palette.svg'
+import LogoFile from '../assets/paint.svg'
 
 const Container = styled.div`
     display: flex;
@@ -8,11 +8,12 @@ const Container = styled.div`
 `
 const Logo = styled.img`
     height: 32rem;
-    margin-right: 9rem;
+    margin-right: 8rem;
     margin-left: -3rem;
+    transform: rotate(90deg);
 `
 const Text = styled.h4`
-    margin-top: 6rem;
+    /* margin-top: 6rem; */
     font-family: 'Domine';
 `
 

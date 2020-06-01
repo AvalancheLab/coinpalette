@@ -47,12 +47,9 @@ export default function Docs() {
 
     async function fetchData () {
         const response = await fetch(url)
-        console.log(response)
         const json = await response.json()
-        console.log(json)
         const jsonString = JSON.stringify(json, null, 2)
-        console.log(jsonString)
-        setFetchReponse(jsonString ? jsonString : 'Error fetching data.')
+        setFetchReponse(jsonString[0] ? jsonString : 'Error fetching data.')
     }
 
     return (
