@@ -53,7 +53,8 @@ async function generatePalettes () {
         .catch(err => new Error(err))
 
         // Create palette object containing rgb, hex and hsl fields.
-        Object.keys(colors).forEach(variant => {
+
+        for (variant in colors) {
             const color = colors[variant];
             if (!color) return console.log(`Failed to get palettes for ${id}`)
             const rgb = roundToInt(color.getRgb());
@@ -62,9 +63,8 @@ async function generatePalettes () {
                 hex : convert.rgb.hex(...rgb),
                 hsl : convert.rgb.hsl(...rgb)
             }
-
-        })
-
+        }
+        
         function roundToInt (array) {
             return array.map(val => Math.round(val))
         }
